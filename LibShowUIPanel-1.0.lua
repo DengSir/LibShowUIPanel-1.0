@@ -3,7 +3,7 @@
 -- @Link   : https://dengsir.github.io
 -- @Date   : 6/15/2021, 11:20:01 PM
 --
-local MAJOR, MINOR = 'LibShowUIPanel-1.0', 3
+local MAJOR, MINOR = 'LibShowUIPanel-1.0', 4
 
 ---@class LibShowUIPanel-1.0
 local Lib, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
@@ -106,7 +106,7 @@ function Lib.Toggle(frame)
     end
 end
 
-if oldminor < 3 then
+if not oldminor or oldminor < 3 then
     -- 可长期持有的API
     function Lib.ShowUIPanel(frame, force)
         return Lib.Show(frame, force)
