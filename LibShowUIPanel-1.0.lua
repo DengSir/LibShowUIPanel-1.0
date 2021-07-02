@@ -3,7 +3,7 @@
 -- @Link   : https://dengsir.github.io
 -- @Date   : 6/15/2021, 11:20:01 PM
 --
-local MAJOR, MINOR = 'LibShowUIPanel-1.0', 4
+local MAJOR, MINOR = 'LibShowUIPanel-1.0', 5
 
 ---@class LibShowUIPanel-1.0
 local Lib, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
@@ -86,7 +86,7 @@ function Lib.Show(frame, force)
     if not InCombatLockdown() then
         return ShowUIPanel(frame, force)
     else
-        return HidePanel(frame, force)
+        return ShowPanel(frame, force)
     end
 end
 
